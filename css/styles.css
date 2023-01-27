@@ -2,8 +2,10 @@
 
 body {
     text-align: center;
-    background-color: #333;
+    background-color: #444;
+    
 }
+
 
 
 .car {
@@ -11,12 +13,13 @@ body {
     position: relative;
 }
 
+
 #car1 { top: 30px; }
 #car2 { top: 50px; }
 
 #raceInfoContainer {
     width: 80%;
-    margin: 40px auto 0;
+    margin: 50px auto 0;
     background: #333;
     height: 200px;
 }
@@ -69,7 +72,35 @@ input#reset {
     clear: both;
 }
 
+/* css game2 */
+.car2 {
+    display: block;
+    position: relative;
+    
+   
+}
 
+#car3 { top: 10px; }
+#car4 { top: 100px; }
+
+
+.road{
+    width: 50%;
+    margin-right: 50%;
+    top: 180px;
+    left: 0px;
+    
+    position: relative;
+}
+
+.parent{
+    position: relative;
+    top:-200px;
+}
+.children{
+    background-color: red;
+    
+}
 
 
 

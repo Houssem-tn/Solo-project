@@ -33,25 +33,21 @@
         
         var place = 'first';
         
-        // animate car 1
+        
         $('#car1').animate({
         
             // move the car width of the racetrack
             left: raceTrackWidth
             
         }, wakt1, function() {
-            
-            // animation is complete
-            
-            // run a function
             checkIfComplete();
             
-            // give some text feedback in the race info box
+            
             $('#raceInfo1 span').text( 'Finished in ' + place + ' place and clocked in at ' + wakt1 + ' milliseconds!' );
             
         });
         
-        // animate car 2
+        
         $('#car2').animate({
         
             // move the car width of the racetrack
@@ -59,12 +55,9 @@
             
         }, wakt2, function() {
             
-            // animation is complete
+checkIfComplete();
             
-            // run a function
-            checkIfComplete();
             
-            // give some text feedback in the race info box
             $('#raceInfo2 span').text( 'Finished in ' + place + ' place and clocked in at ' + wakt2 + ' milliseconds!' );
             
         });
@@ -77,15 +70,112 @@
         $('.raceInfo span').text('');
     });
     
+    /* jqueery for race cars by keys*/ 
+    $(document).ready(function(){
+/*var counter = 0 ;*/
+/*var count =0;*/
+    $(document).keydown(function(e)
+    { 
+
+        var x = $("#car3").css("left");
+        if(x==="700px"){
+            
+            alert("The yellow ferrari wins")
+            
+            $("#car3").css("left","0px"); 
+            $("#car4").css("left","0px");
+            
+        }
     
+
+
+        switch (e.which) 
+        
+        { 
+            case 37:
+                 $("#car3").animate(
+                    
+                    {left : '-=20'});
+                
+                break;
+                
+                case 39:
+                    
+                $("#car3").animate(
+                    
+                    {left : '+=20' });
+                   
+                    break;
+        }
+         
+
+    })
+    $(document).keyup(function(e)
+    { 
+
+        var y = $("#car4").css("left");
+        if(y==="700px"){
+            alert("The red ferrari wins")  
+            $("#car4").css("left","0px");
+            $("#car3").css("left","0px");
+          }    
+        switch (e.which) 
+        { 
+            case 100:
+                     $("#car4").animate(
+                        
+                        {left : '-=20'}); 
+                    
+                    break;
+                    case 102:
+                        $("#car4").animate(
+                             {left : '+=20'});
+                            
+                            break;
+                            
+                            
+
+                } 
+
+    })
     
+})
+
+  
+ /*   
+
+var car_2 = $('#car2').width();
+var raceRoadWidth =  $('.road').width();
+var car_height=$('#car2').height();
+var raceRoadHeight = $('.road').height();
+console.log("this is the width of the car_2",car_2)
+console.log("this is raceroadwidth",raceRoadWidth)
+console.log("this is car height",car_height)
+console.log("this is raceroad height",raceRoadHeight)
 
 
 
 
+function check(){
+    var car1_travel = car_2 + (counter*40)
+    var car2_travel = car_2 + (counter2*40)
+    if(car1_travel>car2_travel){
+console.log("car1 wins")
+    }
+    else{
+        console.log('car2 wins')
+    }
+}
 
 
+*/
 
+/* function check(){
+    var x = $("#car3").css("left");
+    if(x==="420px"){
+        alert("car1 wins")
+    }
+}*/
 
 
 
