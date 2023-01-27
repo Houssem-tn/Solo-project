@@ -2,10 +2,17 @@
 
 body {
     text-align: center;
-    background-color: #444;
+   /* background-color: #444; */
+   background-image: url(/img/background.gif);
     
 }
+ h1{
+    color: #b82f3e;
+ }
 
+ h2{
+    color: #b82f3e;
+ }
 
 
 .car {
